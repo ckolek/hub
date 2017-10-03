@@ -1,0 +1,3 @@
+rootProject.name = 'hub'
+
+include 'hub-core', 'hub-determinant', 'hub-fix-serialization', 'hub-fix-server', 'hub-main', 'hub-test'

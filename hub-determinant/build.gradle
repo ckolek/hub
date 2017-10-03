@@ -1,0 +1,4 @@
+
+dependencies {
+    compile group: 'me.kolek', name: 'determinant', version: '1.0-SNAPSHOT'
+}

@@ -1,0 +1,5 @@
+
+dependencies {
+    compile project(':hub-determinant')
+    compile group: 'me.kolek.fix', name: 'fix-serialization', version: '1.0-SNAPSHOT'
+}

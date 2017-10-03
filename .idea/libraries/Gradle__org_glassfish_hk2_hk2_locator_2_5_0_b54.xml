@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b54">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b54/8ad47fa4d30d98b49206aa0879e1198dc0bbe704/hk2-locator-2.5.0-b54.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b54/e7c7ed0294af830df0829063cfed3fb03826c7fd/hk2-locator-2.5.0-b54-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

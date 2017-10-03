@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://xmlns.jcp.org/xml/ns/jdo/jdo"
+     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/jdo/jdo http://xmlns.jcp.org/xml/ns/jdo/jdo_3_1.xsd">
+    <package name="me.kolek.hub.fix.server.data">
+        <class name="FixServerBean" table="FIX_SERVER">
+            <field name="serverId" column="SERVER_ID" primary-key="true"/>
+            <field name="hostId" column="HOST_ID"/>
+            <field name="autoStart" column="AUTO_START"/>
+            <field name="engines">
+                <map value-type="FixEngineBean"/>
+                <join column="SERVER_ID"/>
+                <key column="ENGINE_ID"/>
+            </field>
+        </class>
+        <class name="FixEngineBean" table="FIX_ENGINE">
+            <field name="engineId" column="ENGINE_ID" primary-key="true"/>
+            <field name="acceptorHost" column="ACCEPTOR_HOST"/>
+            <field name="acceptorPort" column="ACCEPTOR_PORT"/>
+            <field name="connections">
+                <map value-type="FixConnectionBean"/>
+                <join column="ENGINE_ID"/>
+                <key column="CONNECTION_ID"/>
+            </field>
+        </class>
+        <class name="FixConnectionBean" table="FIX_CONNECTION">
+            <field name="connectionId" column="CONNECTION_ID" primary-key="true"/>
+            <field name="name" column="NAME"/>
+            <field name="acceptor" column="ACCEPTOR"/>
+            <field name="fixVersion" column="FIX_VERSION"/>
+            <field name="transportVersion" column="TRANSPORT_VERSION"/>
+            <field name="senderCompId" column="SENDER_COMP_ID"/>
+            <field name="senderSubId" column="SENDER_SUB_ID"/>
+            <field name="senderLocationId" column="SENDER_LOCATION_ID"/>
+            <field name="targetCompId" column="TARGET_COMP_ID"/>
+            <field name="targetSubId" column="TARGET_SUB_ID"/>
+            <field name="targetLocationId" column="TARGET_LOCATION_ID"/>
+            <field name="host" column="HOST"/>
+            <field name="port" column="PORT"/>
+            <field name="fallbackHost1" column="FALLBACK_HOST1"/>
+            <field name="fallbackPort1" column="FALLBACK_PORT1"/>
+            <field name="fallbackHost2" column="FALLBACK_HOST2"/>
+            <field name="fallbackPort2" column="FALLBACK_PORT2"/>
+            <field name="heartbeatInterval" column="HEARTBEAT_INTERVAL"/>
+        </class>
+    </package>
+</jdo>

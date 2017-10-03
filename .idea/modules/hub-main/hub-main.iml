@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":hub-main" external.linked.project.path="$MODULE_DIR$/../../../hub-main" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="me.kolek.hub" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../hub-main/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../hub-main/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../hub-main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../hub-main/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../hub-main/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../hub-main/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../hub-main/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../hub-main/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../hub-main/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../hub-main/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="hub-core" scope="PROVIDED" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: me.kolek:util:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: me.kolek:management:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.datanucleus:datanucleus-core:5.1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.datanucleus:datanucleus-api-jdo:5.1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.datanucleus:javax.jdo:3.2.0-m7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.datanucleus:datanucleus-rdbms:5.1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.sourceforge.jtds:jtds:1.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.transaction:transaction-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.annotation:javax.annotation-api:1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.javassist:javassist:3.22.0-CR2" level="project" />
+    <orderEntry type="module" module-name="hub-core" scope="RUNTIME" />
+    <orderEntry type="module" module-name="hub-fix-server" scope="RUNTIME" />
+    <orderEntry type="module" module-name="hub-fix-serialization" scope="RUNTIME" />
+    <orderEntry type="module" module-name="hub-determinant" scope="RUNTIME" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek:util:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek:management:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.datanucleus:datanucleus-core:5.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.datanucleus:datanucleus-api-jdo:5.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.datanucleus:javax.jdo:3.2.0-m7" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.datanucleus:datanucleus-rdbms:5.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.sourceforge.jtds:jtds:1.3.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek.fix:fix-engine:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.transaction:transaction-api:1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.annotation:javax.annotation-api:1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.javassist:javassist:3.22.0-CR2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek.fix:fix-serialization:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek.fix:fix-core:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: me.kolek:determinant:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.sf.trove4j:trove4j:3.0.3" level="project" />
+    <orderEntry type="module" module-name="hub-core" scope="TEST" />
+    <orderEntry type="module" module-name="hub-test" scope="TEST" />
+    <orderEntry type="module" module-name="hub-fix-server" scope="TEST" />
+    <orderEntry type="module" module-name="hub-fix-serialization" scope="TEST" />
+    <orderEntry type="module" module-name="hub-determinant" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek:util:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek:management:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.hk2:hk2-api:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.datanucleus:datanucleus-core:5.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.datanucleus:datanucleus-api-jdo:5.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.datanucleus:javax.jdo:3.2.0-m7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.hk2:hk2-locator:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.hk2:hk2-utils:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.datanucleus:datanucleus-rdbms:5.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.sourceforge.jtds:jtds:1.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.transaction:transaction-api:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.glassfish.hk2.external:javax.inject:2.5.0-b54" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.annotation:javax.annotation-api:1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.javassist:javassist:3.22.0-CR2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek.fix:fix-engine:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek.fix:fix-serialization:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek.fix:fix-core:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.kolek:determinant:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.sf.trove4j:trove4j:3.0.3" level="project" />
+  </component>
+</module>

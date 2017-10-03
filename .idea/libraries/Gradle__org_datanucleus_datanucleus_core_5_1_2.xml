@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.datanucleus:datanucleus-core:5.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.datanucleus/datanucleus-core/5.1.2/276fe044814f6dcc086d0cd2f02250325d384c9b/datanucleus-core-5.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.datanucleus/datanucleus-core/5.1.2/3f0450465ce08f61ad1ba29e4fc00599defe4792/datanucleus-core-5.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

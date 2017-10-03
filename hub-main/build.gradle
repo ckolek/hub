@@ -1,0 +1,22 @@
+
+task runHub(type: JavaExec) {
+    group 'other'
+    description 'Run Hub application'
+
+    classpath sourceSets.main.runtimeClasspath
+
+    main = 'me.kolek.hub.Hub'
+
+    doFirst {
+        def propertiesFile = new File(project.rootProject.rootDir, 'hub.properties')
+        if (propertiesFile.exists()) {
+            def properties = new Properties()
+            properties.load(new FileReader(propertiesFile))
+            systemProperties(properties)
+        }
+    }
+}
+
+dependencies {
+    runtime project(':hub-fix-server')
+}

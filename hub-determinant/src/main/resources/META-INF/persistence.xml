@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.0">
+    <persistence-unit name="Determinant">
+        <mapping-file>/me/kolek/hub/determinant/data/package.jdo</mapping-file>
+        <exclude-unlisted-classes/>
+        <properties>
+            <property name="javax.jdo.PersistenceManagerFactoryClass"
+                      value="org.datanucleus.api.jdo.JDOPersistenceManagerFactory"/>
+            <property name="datanucleus.rdbms.allowColumnReuse" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,6 @@
+
+dependencies {
+    compile project(':hub-fix-serialization')
+    compile group: 'me.kolek', name: 'management', version: '1.0-SNAPSHOT'
+    compile group: 'me.kolek.fix', name: 'fix-engine', version: '1.0-SNAPSHOT'
+}

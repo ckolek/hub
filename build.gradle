@@ -1,0 +1,70 @@
+allprojects {
+    group 'me.kolek.hub'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'maven'
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+
+    task datanucleusEnhance(type: JavaExec) {
+        group 'build'
+        description 'Enhance JDO model classes using DataNucleus Enhancer'
+        dependsOn classes
+
+        classpath = sourceSets.main.runtimeClasspath
+
+        main = 'javax.jdo.Enhancer'
+
+        if (project.hasProperty('javax.jdo.enhance')) {
+            args '-r'
+            project.property('javax.jdo.enhance').split(';').each { enhancePath ->
+                sourceSets.main.resources.srcDirs.each { srcDir ->
+                    args new File(srcDir, enhancePath).getPath()
+                }
+            }
+        }
+
+        onlyIf {
+            project.hasProperty('javax.jdo.enhance')
+        }
+    }
+
+    classes.doLast {
+        if (didWork && project.hasProperty('javax.jdo.enhance')) {
+            datanucleusEnhance.exec()
+        }
+    }
+
+    test.doFirst {
+        def testPropertiesFile = new File(project.rootProject.rootDir, 'hub-test.properties')
+        if (testPropertiesFile.exists()) {
+            def testProperties = new Properties()
+            testProperties.load(new FileReader(testPropertiesFile))
+            systemProperties(testProperties)
+        }
+
+        println "Database URL: ${systemProperties['me.kolek.hub.db.url']}"
+        println "Database User: ${systemProperties['me.kolek.hub.db.user']}"
+    }
+
+    dependencies {
+        compile group: 'me.kolek', name: 'util', version: '1.0-SNAPSHOT'
+        compile group: 'com.google.guava', name: 'guava', version: '19.0'
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        if (project != project(':hub-core')) {
+            compile project(':hub-core')
+            if (project != project(':hub-test')) {
+                testCompile project(':hub-test')
+            }
+        }
+    }
+}

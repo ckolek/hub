@@ -1,0 +1,18 @@
+
+package $package;
+
+public class $class {
+<% fields.each { field ->%>
+    private $field.javaType $field.name;
+<%}%>
+
+<% fields.each { field ->%>
+    public $field.javaType get${field.name.capitalize()}() {
+        return $field.name;
+    }
+
+    public void set${field.name.capitalize()}($field.javaType $field.name) {
+        this.$field.name = $field.name;
+    }
+<%}%>
+}

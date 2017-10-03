@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://xmlns.jcp.org/xml/ns/jdo/jdo"
+     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/jdo/jdo http://xmlns.jcp.org/xml/ns/jdo/jdo_3_1.xsd">
+    <package name="me.kolek.hub.fix.serialization.data">
+        <class name="FixFieldTypeBean" table="FIX_FIELD_TYPE">
+            <field name="typeCd" column="TYPE_CD" primary-key="true"/>
+            <field name="parent" column="PARENT_TYPE_CD"/>
+            <property name="specs" persistence-modifier="persistent" table="FIX_FIELD_TYPE_SPEC">
+                <collection element-type="FixFieldTypeSpecBean" embedded-element="true"/>
+                <join column="TYPE_CD"/>
+                <element>
+                    <embedded>
+                        <field name="fixVersion" column="FIX_VERSION"/>
+                        <field name="schemaCd" column="SCHEMA_CD"/>
+                        <field name="format1" column="FORMAT1"/>
+                        <field name="format2" column="FORMAT2"/>
+                        <field name="multiplier" column="MULTIPLIER"/>
+                    </embedded>
+                </element>
+            </property>
+        </class>
+        <class name="FixFieldTypeSpecBean" table="FIX_FIELD_TYPE_SPEC" embedded-only="true">
+            <field name="fixVersion"/>
+            <field name="schemaCd"/>
+            <field name="format1"/>
+            <field name="format2"/>
+            <field name="multiplier"/>
+        </class>
+        <class name="FixFieldBean" table="FIX_FIELD">
+            <field name="fieldId" column="FIELD_ID" primary-key="true"/>
+            <field name="name" column="NAME"/>
+            <field name="tagNum" column="TAG_NUM"/>
+            <field name="type" column="TYPE_CD"/>
+        </class>
+        <class name="FixStructureBean" table="FIX_STRUCTURE">
+            <field name="structureId" column="STRUCTURE_ID" primary-key="true"/>
+            <field name="name" column="NAME"/>
+            <field name="typeCd" column="TYPE_CD"/>
+            <field name="msgType" column="MSG_TYPE"/>
+            <field name="noField" column="NO_FIELD_ID"/>
+            <property name="elements" persistence-modifier="persistent" table="FIX_STRUCTURE_ELEMENT">
+                <collection element-type="FixStructureElementBean" embedded-element="true"/>
+                <join column="STRUCTURE_ID"/>
+                <element>
+                    <embedded>
+                        <field name="fixVersion" column="FIX_VERSION"/>
+                        <field name="schemaCd" column="SCHEMA_CD"/>
+                        <field name="orderNo" column="ORDER_NO"/>
+                        <field name="substructure" column="SUB_STRUCTURE_ID"/>
+                        <field name="field" column="FIELD_ID"/>
+                        <field name="required" column="REQUIRED"/>
+                        <field name="trailing" column="TRAILING"/>
+                    </embedded>
+                </element>
+                <order>
+                    <column name="ORDER_NO"/>
+                </order>
+            </property>
+        </class>
+        <class name="FixStructureElementBean" table="FIX_STRUCTURE_ELEMENT" embedded-only="true">
+            <field name="fixVersion"/>
+            <field name="schemaCd"/>
+            <field name="orderNo"/>
+            <field name="substructure"/>
+            <field name="field"/>
+            <field name="required"/>
+            <field name="trailing"/>
+        </class>
+    </package>
+</jdo>

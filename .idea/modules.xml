@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub.iml" filepath="$PROJECT_DIR$/.idea/modules/hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-core/hub-core.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-core/hub-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-determinant/hub-determinant.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-determinant/hub-determinant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-fix-serialization/hub-fix-serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-fix-serialization/hub-fix-serialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-fix-server/hub-fix-server.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-fix-server/hub-fix-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-main/hub-main.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-main/hub-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hub-test/hub-test.iml" filepath="$PROJECT_DIR$/.idea/modules/hub-test/hub-test.iml" />
+    </modules>
+  </component>
+</project>

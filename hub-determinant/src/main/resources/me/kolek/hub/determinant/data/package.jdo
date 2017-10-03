@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://xmlns.jcp.org/xml/ns/jdo/jdo"
+     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/jdo/jdo http://xmlns.jcp.org/xml/ns/jdo/jdo_3_1.xsd">
+    <package name="me.kolek.hub.determinant.data">
+        <class name="DeterminantTypeBean" table="DETERMINANT_TYPE">
+            <field name="typeCd" column="TYPE_CD" primary-key="true"/>
+            <field name="description" column="DESCRIPTION"/>
+        </class>
+        <class name="DeterminantPropertyBean" table="DETERMINANT_PROPERTY">
+            <field name="propId" column="PROP_ID" primary-key="true"/>
+            <field name="name" column="NAME"/>
+        </class>
+        <class name="DeterminantBean" table="DETERMINANT">
+            <field name="determId" column="DETERM_ID" primary-key="true"/>
+            <field name="type" column="TYPE_CD"/>
+            <field name="parent" column="PARENT_ID"/>
+            <field name="children" mapped-by="parent">
+                <collection element-type="DeterminantBean"/>
+                <element>
+                    <column name="PARENT_ID" target="DETERM_ID"/>
+                </element>
+            </field>
+            <field name="name" column="NAME"/>
+            <field name="description" column="DESCRIPTION"/>
+            <field name="priority" column="PRIORITY"/>
+            <field name="active" column="ACTIVE"/>
+            <field name="unions">
+                <collection element-type="DeterminantCriterionUnionBean"/>
+                <element column="DETERM_ID"/>
+                <order column="ORDER_NO"/>
+            </field>
+            <field name="criteria">
+                <collection element-type="DeterminantCriterionBean"/>
+                <element column="DETERM_ID"/>
+                <order column="ORDER_NO"/>
+            </field>
+        </class>
+        <class name="DeterminantCriterionUnionBean" table="DETERMINANT_CRITERION_UNION">
+            <field name="determId" column="DETERM_ID" primary-key="true"/>
+            <field name="orderNo" column="ORDER_NO" primary-key="true"/>
+            <field name="parent" column="PARENT_ORDER_NO"/>
+            <field name="children" mapped-by="parent">
+                <collection element-type="DeterminantCriterionUnionBean"/>
+                <element>
+                    <column name="DETERM_ID"/>
+                    <column name="PARENT_ORDER_NO" target="ORDER_NO"/>
+                </element>
+                <order column="ORDER_NO"/>
+            </field>
+            <field name="negate" column="NEGATE"/>
+            <field name="shortCircuit" column="SHORT_CIRCUIT"/>
+            <field name="criteria">
+                <collection element-type="DeterminantCriterionBean"/>
+                <element>
+                    <column name="DETERM_ID"/>
+                    <column name="UNION_ORDER_NO" target="ORDER_NO"/>
+                </element>
+                <order column="ORDER_NO"/>
+            </field>
+        </class>
+        <class name="DeterminantCriterionBean" table="DETERMINANT_CRITERION">
+            <field name="determId" column="DETERM_ID" primary-key="true"/>
+            <field name="orderNo" column="ORDER_NO" primary-key="true"/>
+            <field name="property" column="PROP_ID"/>
+            <field name="negate" column="NEGATE"/>
+            <field name="operatorCd" column="OPERATOR_CD"/>
+            <field name="valueTypeCd" column="VALUE_TYPE_CD"/>
+            <field name="shortCircuit" column="SHORT_CIRCUIT"/>
+            <field name="values" persistence-modifier="persistent" table="DETERMINANT_CRITERION_VALUE">
+                <collection element-type="DeterminantCriterionValueBean" embedded-element="true"/>
+                <join>
+                    <column name="DETERM_ID"/>
+                    <column name="ORDER_NO"/>
+                </join>
+                <element>
+                    <embedded>
+                        <field name="value" column="VALUE"/>
+                        <field name="suppValue1" column="SUPP_VALUE1"/>
+                        <field name="suppValue2" column="SUPP_VALUE2"/>
+                    </embedded>
+                </element>
+                <order column="ORDER_NO"/>
+            </field>
+        </class>
+        <class name="DeterminantCriterionValueBean" table="DETERMINANT_CRITERION_VALUE" embedded-only="true">
+            <field name="value"/>
+            <field name="suppValue1"/>
+            <field name="suppValue2"/>
+        </class>
+    </package>
+</jdo>
