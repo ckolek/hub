@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: me.kolek:determinant:1.0-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/me/kolek/determinant/1.0-SNAPSHOT/determinant-1.0-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
